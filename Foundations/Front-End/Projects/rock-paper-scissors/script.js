@@ -1,5 +1,4 @@
 // randomly return either 'Rock', 'Paper', 'Scissors'
-
 let items = ['Rock', 'Paper', 'Scissors'];
 
 function computerPlay() {
@@ -8,7 +7,6 @@ function computerPlay() {
 }
 
 // plays a single round of Rock Paper Scissors, return string
-
 let playerSelection = window.prompt("Choose: Rock  Paper  Scissors",'');
 let computerSelection = computerPlay();
 
