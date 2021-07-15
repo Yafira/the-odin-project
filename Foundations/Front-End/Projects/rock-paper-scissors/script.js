@@ -46,26 +46,5 @@ function playRound(playerSelection, computerSelection) {
             }
     }
 
-
-// game, play a 5 round game that keeps score reports a winner/loser at the end
-function game() {
-    console.log(playRound());
-    console.log(playRound());
-    console.log(playRound());
-    console.log(playRound());
-    console.log(playRound());
-
-    if (playerScore > computerScore) {
-        return "You win the game!";
-    } else if (playerScore < computerScore) {
-        return "You lose the game!";
-    } else {
-        return "It's a draw!";
-        }
-    }
-
-    let playerScore = 0;
-    let computerScore = 0;
-
     // test function
     console.log(playRound(playerSelection, computerSelection));
