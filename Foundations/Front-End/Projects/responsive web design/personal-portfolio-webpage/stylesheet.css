@@ -5,14 +5,14 @@
 }
 
 body {
-    background-color: #F1F9DC;
+    background-color: #FFFFFF;
     font-size: 20px;
     font-family: 'IBM Plex Mono', monospace;
     margin: 0;
 }
 
 nav {
-    background-color: #E0D9ED;
+    background-color: #FFFFFF;
     color: #FFF;
     display: flex;
     justify-content: space-between;
@@ -52,7 +52,6 @@ header {
     padding: 300px 100px;
     box-sizing: border-box;
     height: 100vh;
-    max-width: 800px;
     margin: auto;
 }
 
@@ -63,7 +62,7 @@ header h1 {
 }
 
 header p {
-    font-size: 20px;
+    font-size: 2vw;
     margin: 0;
 }
 
@@ -107,6 +106,18 @@ section p {
 .project-tile p {
     font-size: 20px;
     margin-top: 10px;
+}
+
+#welcome-section {
+    background-color: #f8f6ed;
+}
+
+.content {
+    max-width: 700px;
+}
+
+#projects {
+    background: #ede7f8;
 }
 
 #skills {
@@ -162,7 +173,7 @@ section p {
 
 footer {
     height: 50px;
-    background-color: #E0D9ED;
+    background-color: #FFFFFF;
     text-align: center;
     padding-top: 10px;
 }
