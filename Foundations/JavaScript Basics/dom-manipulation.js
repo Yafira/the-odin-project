@@ -37,3 +37,21 @@ newDiv.appendChild(newParagraph);
 
 // add newDiv under container
 container.appendChild(newDiv);
+
+// alert function
+ // METHOD 1
+function alertFunction() {
+    alert("YAY! YOU DID IT!");
+}
+
+ // METHOD 2
+btn.onclick = alertFunction;
+
+
+ // METHOD 3
+const btn = document.querySelector('#btn');
+
+btn.addEventListener('click', function(e){
+    // console.log(e.target);
+    e.target.style.background = 'blue';
+})
