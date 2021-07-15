@@ -1,7 +1,7 @@
 // find the ID container
 const container = document.querySelector('#container');
 
-// create new div cand store it in the variable content
+// create new div and store it in the variable content
 const content = document.createElement('div');
 content.classList.add('content');
 // add class and some text to the content div
@@ -31,6 +31,7 @@ const newHeader = document.createElement('h1');
 newHeader.textContent = "I'm in a div";
 newDiv.appendChild(newHeader);
 
+// create new paragraph under new div
 const newParagraph = document.createElement('p');
 newParagraph.textContent = "ME TOO!"
 newDiv.appendChild(newParagraph);
