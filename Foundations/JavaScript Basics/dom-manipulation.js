@@ -15,10 +15,25 @@ paragraph.textContent = "Hey I\'m RED!"
 paragraph.style.color = 'red';
 content.appendChild(paragraph);
 
-// create a header size 3 under content
+// create a header level 3 under content
 const header3 = document.createElement('h3');
 header3.textContent = "I\'m a blue h3!";
 header3.style.color = 'blue';
 content.appendChild(header3);
 
+// create a new div with a black border and pink bg
+const newDiv = document.createElement('div');
+newDiv.style.backgroundColor = 'pink';
+newDiv.style.borderColor = '3px solid black';
 
+// create new header under new div
+const newHeader = document.createElement('h1');
+newHeader.textContent = "I'm in a div";
+newDiv.appendChild(newHeader);
+
+const newParagraph = document.createElement('p');
+newParagraph.textContent = "ME TOO!"
+newDiv.appendChild(newParagraph);
+
+// add newDiv under container
+container.appendChild(newDiv);
