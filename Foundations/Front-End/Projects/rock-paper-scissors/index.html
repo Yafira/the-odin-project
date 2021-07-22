@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesheet.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
 
-    <h1>Simple Rock Paper Scissors game with JS</h1>
+    <h1>Kawaii RPS</h1>
     <h2>
-        Player <span id="p-score">0</span> - <span id="c-score">0</span> Computer
+        You <span id="p-score">0</span> - <span id="c-score">0</span> Computer
     </h2>
-    <button class="options">Rock</button>
-    <button class="options">Paper</button>
-    <button class="options">Scissors</button>
+    <div class="display-selection">
+        <div class="selection">
+            <img id="p-selection" src="./assets/rock.png">
+        </div>
+        <div class="separator">VS</div>
+        <div class="selection">
+            <img id="c-selection" src="./assets/rock.png">
+        </div>
+    </div>
 
+    <h2>Choose your destructor:<h2>
+        <div class="action">
+            <input class="options" type="image" src="./img/rock.png" value="Rock" />
+            <input class="options" type="image" src="./img/paper.png" value="Paper" />
+            <input class="options" type="image" src="./img/scissors.png" value="Scissors" />
+        </div>
+
+
+    <!-- my script -->
     <script src = "script.js"></script>
 
 </body>

@@ -5,7 +5,7 @@ let computerScore = 0;
 
     options.forEach((option) => {
         option.addEventListener("click", function () {
-        const playerSelection = this.textContent;
+        const playerSelection = this.value;
 
         const compOptions = ["Rock", "Paper", "Scissors"];
         const computerSelection = compOptions[Math.floor(Math.random() * 3)];
