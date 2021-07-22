@@ -1,14 +1,24 @@
-// randomly return either 'Rock', 'Paper', 'Scissors'
-let items = ['Rock', 'Paper', 'Scissors'];
+// replacing prompt input with event listener for each selection
+const options = document.querySelectorAll(".options");
+    options.forEach((option) => {
+        option.addEventListener("click", function () {
+        // TO DO: process user click
 
-function computerPlay() {
-    let result = items[Math.floor(Math.random() * items.length)];
-    return result;
-}
 
-// plays a single round of Rock Paper Scissors, return string
-let playerSelection = window.prompt("Choose: Rock  Paper  Scissors",'');
-let computerSelection = computerPlay();
+
+
+
+// // randomly return either 'Rock', 'Paper', 'Scissors'
+// let items = ['Rock', 'Paper', 'Scissors'];
+
+// function computerPlay() {
+//     let result = items[Math.floor(Math.random() * items.length)];
+//     return result;
+// }
+
+// // plays a single round of Rock Paper Scissors, return string
+// let playerSelection = window.prompt("Choose: Rock  Paper  Scissors",'');
+// let computerSelection = computerPlay();
 
 function playRound(playerSelection, computerSelection) {
 
