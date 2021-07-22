@@ -1,5 +1,7 @@
 // replacing prompt input with event listener for each selection
 const options = document.querySelectorAll(".options");
+let playerScore = 0;
+let computerScore = 0;
 
     options.forEach((option) => {
         option.addEventListener("click", function () {
