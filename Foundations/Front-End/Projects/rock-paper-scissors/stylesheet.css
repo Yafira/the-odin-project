@@ -64,3 +64,21 @@ body {
     max-width: 500px;
     margin: auto;
 }
+.round {
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: rgb(135, 158, 250);
+    align-items: center;
+    border-style: solid;
+    max-width: 190px;
+    margin: auto;
+}
+.tie {
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: rgb(135, 158, 250);
+    align-items: center;
+    border-style: solid;
+    max-width: 190px;
+    margin: auto;
+}

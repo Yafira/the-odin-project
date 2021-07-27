@@ -1,7 +1,11 @@
 // replacing prompt input with event listener for each selection
 const options = document.querySelectorAll(".options");
+let roundCount = 0;
+let tieCount = 0;
 let playerScore = 0;
 let computerScore = 0;
+let roundState = "";
+let roundText = "";
 
     options.forEach((option) => {
         option.addEventListener("click", function () {
@@ -14,12 +18,13 @@ let computerScore = 0;
         playRound(playerSelection, computerSelection);
         updateScore();
         if (checkWinner()) {
-            playerScore = computerScore = 0;
+            playerScore = computerScore = roundCount = 0;
             updateScore();
         }
     });
 });
 
+// update player's move
 function updateMoves(playerSelection, computerSelection) {
     document.getElementById("p-score").src = `./assets/${playerSelection}.png`;
     document.getElementById("c-score").src = `./assets/${computerSelection}.png`;
@@ -30,17 +35,24 @@ function playRound(playerSelection, computerSelection) {
 
     // check if it's a tie
     if (playerSelection === computerSelection) {
-        console.log(`${currentMatch} Draw!`);
+        roundCount++;
+        roundState = `${currentMatch}`;
+        roundText = 'Draw! Try again.';
+        tieCount++;
         return;
     }
 
     // Rock
     if (playerSelection === "Rock") {
         if (computerSelection === "Scissors") {
-            console.log(`${currentMatch} = You Win!`);
+            roundCount++;
+            roundState = `${currentMatch}`;
+            roundText = `Yay! You Win!`
             playerScore++;
         } else {
-            console.log(`${currentMatch} = Computer Wins!`);
+            roundCount++;
+            roundState = `${currentMatch}`;
+            roundText = `Ah! Computer Wins!`;
             computerScore++;
         }
     }
@@ -48,28 +60,40 @@ function playRound(playerSelection, computerSelection) {
     // Paper
     else if (playerSelection === "Paper") {
         if (computerSelection === "Rock") {
-            console.log(`${currentMatch} = You Win!`);
+            roundCount++;
+            roundState = `${currentMatch}`;
+            roundText = `Hooray! You Win!`;
             playerScore++;
         } else {
-            console.log(`${currentMatch} = Computer Wins!`);
+            roundCount++;
+            roundState = `${currentMatch}`;
+            roundText = `Uh oh! Computer Wins!`
             computerScore++;
         }
     }
     // Scissors
     else if (playerSelection === "Scissors") {
         if (computerSelection === "Paper") {
-            console.log(`${currentMatch} = You Win!`);
+            roundCount++;
+            roundState = `${currentMatch} `;
+            roundText = `Ha! You Win!`;
             playerScore++;
         } else {
-            console.log(`${currentMatch} = Computer Wins!`);
+            roundCount++;
+            roundState = `${currentMatch}`;
+            roundText = `Yikes! Computer Wins!`;
             computerScore++;
         }
     }
 }
 // update score after each round
 function updateScore(playerSelection, computerSelection) {
+    document.getElementById("round-count").textContent = roundCount;
+    document.getElementById("tie-count").textContent = tieCount;
     document.getElementById("p-score").textContent = playerScore;
     document.getElementById("c-score").textContent = computerScore;
+    document.getElementById("outcome").textContent = roundState;
+    document.getElementById("stage").textContent = roundText;
 }
 
 // check who's the winner after 5 rounds
@@ -79,7 +103,9 @@ function checkWinner() {
         playerScore === 5
             ? "You win the game! Congratulations!"
             : "Computer wins the game! Try again next time!";
-        alert(winner);
+        roundCount++;
+        roundState = `${winner}`;
+        roundText = "";
         return true;
     }
     return false;
