@@ -10,9 +10,9 @@ let computerScore = 0;
         const compOptions = ["Rock", "Paper", "Scissors"];
         const computerSelection = compOptions[Math.floor(Math.random() * 3)];
 
+        updateMoves(playerSelection, computerSelection);
         playRound(playerSelection, computerSelection);
         updateScore();
-
         if (checkWinner()) {
             playerScore = computerScore = 0;
             updateScore();
@@ -20,22 +20,27 @@ let computerScore = 0;
     });
 });
 
+function updateMoves(playerSelection, computerSelection) {
+    document.getElementById("p-score").src = `./assets/${playerSelection}.png`;
+    document.getElementById("c-score").src = `./assets/${computerSelection}.png`;
+}
+
 function playRound(playerSelection, computerSelection) {
     const currentMatch = `${playerSelection} vs ${computerSelection}`;
 
     // check if it's a tie
     if (playerSelection === computerSelection) {
-        alert(`${currentMatch} is a Tie!`);
+        console.log(`${currentMatch} Draw!`);
         return;
     }
 
     // Rock
     if (playerSelection === "Rock") {
         if (computerSelection === "Scissors") {
-            alert(`${currentMatch} = You Win!`);
+            console.log(`${currentMatch} = You Win!`);
             playerScore++;
         } else {
-            alert(`${currentMatch} = Computer Wins!`);
+            console.log(`${currentMatch} = Computer Wins!`);
             computerScore++;
         }
     }
@@ -43,26 +48,26 @@ function playRound(playerSelection, computerSelection) {
     // Paper
     else if (playerSelection === "Paper") {
         if (computerSelection === "Rock") {
-            alert(`${currentMatch} = You Win!`);
+            console.log(`${currentMatch} = You Win!`);
             playerScore++;
         } else {
-            alert(`${currentMatch} = Computer Wins!`);
+            console.log(`${currentMatch} = Computer Wins!`);
             computerScore++;
         }
     }
     // Scissors
     else if (playerSelection === "Scissors") {
         if (computerSelection === "Paper") {
-            alert(`${currentMatch} = You Win!`);
+            console.log(`${currentMatch} = You Win!`);
             playerScore++;
         } else {
-            alert(`${currentMatch} = Computer Wins!`);
+            console.log(`${currentMatch} = Computer Wins!`);
             computerScore++;
         }
     }
 }
 // update score after each round
-function updateScore() {
+function updateScore(playerSelection, computerSelection) {
     document.getElementById("p-score").textContent = playerScore;
     document.getElementById("c-score").textContent = computerScore;
 }
