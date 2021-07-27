@@ -24,6 +24,18 @@ let roundText = "";
     });
 });
 
+// reset score handling
+const resetGame = function() {
+    roundCount = 0;
+    tieCount = 0;
+    playerScore = 0;
+    computerScore = 0;
+    document.getElementById("round-count").textContent = "0";
+    document.getElementById("p-score").textContent = "0";
+    document.getElementById("c-score").textContent = "0";
+    document.getElementById("tie-count").textContent = "0";
+};
+
 // update player's move
 function updateMoves(playerSelection, computerSelection) {
     document.getElementById("p-score").src = `./assets/${playerSelection}.png`;
@@ -106,6 +118,7 @@ function checkWinner() {
         roundCount++;
         roundState = `${winner}`;
         roundText = "";
+        resetGame();
         return true;
     }
     return false;
