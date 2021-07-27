@@ -88,8 +88,8 @@ function playRound(playerSelection, computerSelection) {
 }
 // update score after each round
 function updateScore(playerSelection, computerSelection) {
-    document.getElementById("round-count").textContent = roundCount;
-    document.getElementById("tie-count").textContent = tieCount;
+    document.getElementById("round-count").textContent = `Round: ${roundCount}`;
+    document.getElementById("tie-count").textContent = `Tie: ${tieCount}`;
     document.getElementById("p-score").textContent = playerScore;
     document.getElementById("c-score").textContent = computerScore;
     document.getElementById("outcome").textContent = roundState;
