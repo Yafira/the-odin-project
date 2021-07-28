@@ -12,7 +12,59 @@ body {
     font-family: 'Comfortaa', cursive;
     font-size: 30px;
     text-align: center;
-    background-color: rgb(218, 252, 244);;
+    background-color: rgb(199, 247, 236);
+}
+
+.user, .computer {
+    font-size: 30px;
+    padding: 10px;
+}
+.user {
+    background-color: rgb(250, 221, 247);
+}
+
+.computer {
+    background-color: rgb(218, 196, 244);
+}
+.game-score {
+    background:rgb(221, 240, 249);
+    border-radius: 5px;
+    border-width: 5px;
+    border-color: rgb(135, 158, 250);
+    align-items: center;
+    border-style: solid;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+.game-score h2 {
+    margin: 0px 10px;
+}
+.round {
+    background:rgb(221, 240, 249);
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: rgb(135, 158, 250);
+    align-items: center;
+    border-style: solid;
+    max-width: 190px;
+    margin: auto;
+}
+.tie {
+    background:rgb(221, 240, 249);
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: rgb(135, 158, 250);
+    align-items: center;
+    border-style: solid;
+    max-width: 190px;
+    margin: auto;
+}
+.round, .tie {
+    padding: 10px;
 }
 .container {
     margin: 0 auto;
@@ -54,33 +106,4 @@ body {
     60% { transform: translateX(10%) rotate(2deg); }
     75% { transform: translateX(-5%) rotate(-1deg); }
     100% { transform: translateX(0%); }
-}
-.game-score {
-    border-radius: 5px;
-    border-width: 5px;
-    border-color: rgb(135, 158, 250);
-    align-items: center;
-    border-style: solid;
-    max-width: 500px;
-    margin: auto;
-}
-.round {
-    display: inline-block;
-    border-radius: 5px;
-    border-width: 2px;
-    border-color: rgb(135, 158, 250);
-    align-items: center;
-    border-style: solid;
-    max-width: 190px;
-    margin: auto;
-}
-.tie {
-    display: inline-block;
-    border-radius: 5px;
-    border-width: 2px;
-    border-color: rgb(135, 158, 250);
-    align-items: center;
-    border-style: solid;
-    max-width: 190px;
-    margin: auto;
 }
