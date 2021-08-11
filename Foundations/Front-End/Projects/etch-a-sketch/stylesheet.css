@@ -1,15 +1,36 @@
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 100px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    display: inline-block;
+}
+
 .square {
     background-color:rgb(255, 255, 255);
     border:1px solid #000000;
 }
 
-.square-color {
-    background-color: pink;
+.color {
+    background-color: rgb(231, 209, 250);
+    border:1px solid #000000;
     transition: ease 0.1s all;
 }
 
-#container {
-    display: flex;
-    justify-content: center;
-    margin-top: 300px;
+.container {
+    margin-top: 25px;
+    margin-right: 40px;
+    display: inline-grid;
+    grid-template-columns: repeat(16, 2fr);
+    grid-template-rows: repeat(16, 2fr);
+    border: 5px solid black;
+    border-radius: 5px;
+    height: 575px;
+    width: 575px;
 }

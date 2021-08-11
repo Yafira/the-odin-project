@@ -1,23 +1,42 @@
-// 16x16 grid of square divs
-function createGrid(rows, cols, cellSize, gridElement) {
-    gridElement.style.display = "grid";
-    gridElement.style.gridTemplateColumns = `repeat(${cols}, ${cellSize}px)`;
-    gridElement.style.gridTemplateRows = `repeat(${rows}, ${cellSize}px)`;
+const grid = document.querySelector(".container");
+const userInput = document.getElementById("quantity");
+const resetButton = document.querySelector(".reset");
 
-    let squares = new DocumentFragment();
-
-    for (let i = 0; i < rows * cols; i++) {
-        let square = document.createElement('div');
-        square.className = 'square';
-        squares.appendChild(square);
-
-        // hover effect
-        gridElement.addEventListener('mouseover', e =>
-        e.target.classList.add('square-color')
-)
+// create 16x16 grid of square divs
+createGrid = () => {
+    for (let i = 0; i < 256; i++) {
+        const div = document.createElement("div");
+        div.classList.add("square");
+        grid.appendChild(div);
     }
+};
 
-    gridElement.appendChild(squares);
-}
+updateGrid = () => {
+    grid.innerHTML = "";
+    grid.style.setProperty(
+        "grid-template-columns",
+        `repeat(${userInput.value}, 2fr)`
+    );
 
-createGrid(16, 16, 40,  document.querySelector(".grid"));
+    grid.style.setProperty("grid-template-rows",
+    `repeat(${userInput.value}, 2fr)`);
+
+    for (let i = 0; i < userInput.value * userInput.value; i++) {
+        const div = document.createElement("div");
+        div.classList.add("square");
+        grid.appendChild(div);
+    }
+    console.log(userInput.value);
+};
+
+// hover effect
+const square = document.querySelector("div");
+square.addEventListener("mouseover", function(event) {
+    event.target.classList.replace("square", "color");
+});
+
+// update grid with user input
+userInput.addEventListener("change", updateGrid);
+
+
+createGrid();
