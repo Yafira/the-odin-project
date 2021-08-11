@@ -38,5 +38,13 @@ square.addEventListener("mouseover", function(event) {
 // update grid with user input
 userInput.addEventListener("change", updateGrid);
 
+// reset sketch
+resetButton.addEventListener("click", function() {
+    grid.innerHTML = "";
+    userInput.value = "";
+    grid.style.setProperty("grid-template-columns", `repeat(16, 2fr)`);
+    grid.style.setProperty("grid-template-rows", `repeat(16, 2fr)`);
+    createGrid();
+});
 
 createGrid();
