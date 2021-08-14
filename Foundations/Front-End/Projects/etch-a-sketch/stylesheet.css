@@ -12,18 +12,13 @@ html {
     display: inline-block;
 }
 
-.square {
-    background-color:rgb(242, 242, 242);
-    border:1px solid #000000;
-}
-
 .color {
-    background-color: rgb(231, 209, 250);
+    background-color: rgb(137,137,137);
     border:1px solid #000000;
     transition: ease 0.1s all;
 }
 
-.container {
+.canvas {
     margin-top: 25px;
     margin-right: 40px;
     display: inline-grid;
@@ -33,4 +28,21 @@ html {
     border-radius: 5px;
     height: 575px;
     width: 575px;
+}
+
+.cell {
+    background-color:rgb(242, 242, 242);
+    border:1px solid #000000;
+}
+
+footer {
+    margin: 700px 0;
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+footer .fa-heart {
+    color: rgb(217, 181, 242);
+    padding: 0 10px 0;
 }
