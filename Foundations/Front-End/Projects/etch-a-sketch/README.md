@@ -23,3 +23,10 @@ There are multiple ways to change the color of the divs, including:
     - You should be able to enter 64 and have a brand new 64x64 grid pop up without changing the total amount of pixels used.
 
 (Optional): Instead of just changing the color of a square from black to white (for example), have each pass through with the mouse change it to a completely random RGB value. Then try having each pass just add another 10% of black to it so that only after 10 passes is the square completely black.
+
+
+
+## My simple Etch-a-Sketch
+* Will revisit this project and complete the optional
+
+![gif](etch-a-sketch.gif)
