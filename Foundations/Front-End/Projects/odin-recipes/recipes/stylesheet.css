@@ -17,23 +17,28 @@ header {
 
 a {
     text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(153, 167, 244);
 }
 
 h1 {
-    text-align:center;
+    text-align: center;
     font-size: 3rem;
     font-weight: bold;
     height: 100px;
     margin-top: 5px;
-    margin-bottom:5px;
+    margin-bottom: 5px;
 }
 
 img {
     display: block;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 50px;
-    width:400px;
+    width: 400px;
 }
 
 #contents {
@@ -57,4 +62,10 @@ body {
 
 h3 {
     font-size: 36px;
+}
+
+h5 {
+    background-color: #defee7;
+    font-weight: 100;
+    width: fit-content;
 }
