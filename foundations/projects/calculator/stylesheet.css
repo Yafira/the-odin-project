@@ -50,15 +50,16 @@ button {
     justify-content: center;
     height: 50vh;
     min-height: 500px;
-    padding: 10px;
-    margin-top: 400px;
+    padding: 50px;
+    margin-top: 300px;
 }
 
 .calculator {
-    width: 700px;
+    width: 850px;
+    height: 700px;
     border: 2px var(--border) solid;
     border-radius: 15px;
-    padding: 20px;
+    padding: 60px;
     background-color: var(--calculator);
     /* border: 5px solid rgb(233, 169, 214); */
 }
