@@ -47,19 +47,19 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 75vh;
+    height: 50vh;
     min-height: 500px;
     padding: 10px;
     margin-top: 300px;
 }
 
 .calculator {
-    width: 750px;
+    width: 700px;
     border: 2px var(--border) solid;
     border-radius: 15px;
     padding: 20px;
     background-color: var(--calculator);
-    border: 5px solid rgb(233, 169, 214);
+    /* border: 5px solid rgb(233, 169, 214); */
 }
 
 .screen {

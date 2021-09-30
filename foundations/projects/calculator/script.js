@@ -3,6 +3,7 @@ let number2 = '';
 let currentOperation = null;
 let reset = false;
 
+// elements and selectors
 const numButtons = document.querySelectorAll('[data-number]');
 const operatorButtons = document.querySelectorAll('[data-operator]');
 const equalsButton = document.getElementById('equals');
@@ -26,13 +27,6 @@ operatorButtons.forEach((button) =>
     button.addEventListener('click', () => setOperation(button.textContent))
 )
 
-// function losefocus() {
-//     document.querySelectorAll('[data-number]').blur();
-//     // document.querySelectorAll('[data-operator]').blur();
-//     // document.getElementById('equals').blur();
-//     // document.getElementById('point').blur();
-// }
-
 function appendNum(number) {
     if (operationOnScreen.textContent === '0' || reset);
     resetCalc();
@@ -45,7 +39,7 @@ function resetCalc() {
     reset = false;
 }
 
-// clear calculation
+// clear calculator
 function clear() {
     operationOnScreen.textContent = '0';
     lastOperation.textContent = '';
@@ -69,7 +63,6 @@ function deleteNum() {
     .toString()
     .slice(0, -1)
 }
-
 
 function setOperation(operator) {
     if (currentOperation !== null) evaluate()
