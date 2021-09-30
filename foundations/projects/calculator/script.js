@@ -1,0 +1,137 @@
+let number1 = '';
+let number2 = '';
+let currentOperation = null;
+let reset = false;
+
+const numButtons = document.querySelectorAll('[data-number]');
+const operatorButtons = document.querySelectorAll('[data-operator]');
+const equalsButton = document.getElementById('equals');
+const clearButton = document.getElementById('clear');
+const deleteButton = document.getElementById('delete');
+const pointButton = document.getElementById('point');
+const lastOperation = document.getElementById('lastOp');
+const operationOnScreen = document.getElementById('currOp');
+
+// event listeners
+equalsButton.addEventListener('click', evaluate);
+clearButton.addEventListener('click', clear);
+deleteButton.addEventListener('click', deleteNum);
+pointButton.addEventListener('click', appendPoint);
+
+numButtons.forEach((button) =>
+    button.addEventListener('click', () => appendNum(button.textContent))
+)
+
+operatorButtons.forEach((button) =>
+    button.addEventListener('click', () => setOperation(button.textContent))
+)
+
+// function losefocus() {
+//     document.querySelectorAll('[data-number]').blur();
+//     // document.querySelectorAll('[data-operator]').blur();
+//     // document.getElementById('equals').blur();
+//     // document.getElementById('point').blur();
+// }
+
+function appendNum(number) {
+    if (operationOnScreen.textContent === '0' || reset);
+    resetCalc();
+    operationOnScreen.textContent += number;
+}
+
+// reset calculator
+function resetCalc() {
+    operationOnScreen.textContent = '';
+    reset = false;
+}
+
+// clear calculation
+function clear() {
+    operationOnScreen.textContent = '0';
+    lastOperation.textContent = '';
+    number1 = '';
+    number2 = '';
+    currentOperation = null;
+}
+
+function appendPoint() {
+    if (reset) resetCalc()
+    if (operationOnScreen.textContent === '')
+        operationOnScreen.textContent = '0'
+    if (operationOnScreen.textContent.includes('.'))
+    return
+        operationOnScreen.textContent += '.'
+}
+
+// delete number
+function deleteNum() {
+    operationOnScreen.textContent = operationOnScreen.textContent
+    .toString()
+    .slice(0, -1)
+}
+
+
+function setOperation(operator) {
+    if (currentOperation !== null) evaluate()
+    number1 = operationOnScreen.textContent
+    currentOperation = operator
+    lastOperation.textContent = `${number1} ${currentOperation}`
+    reset = true
+}
+
+// evaluate
+function evaluate() {
+    if (currentOperation === null || reset)
+    return
+    if (currentOperation === '÷' && operationOnScreen.textContent === '0') {
+        alert("You can't divide by 0.")
+    return
+}
+    number2 = operationOnScreen.textContent
+    operationOnScreen.textContent = roundResult(
+        operate(currentOperation, number1, number2)
+    )
+    lastOperation.textContent = `${number1} ${currentOperation} ${number2} =`
+    currentOperation = null
+}
+
+    function roundResult(number) {
+        return Math.round(number * 1000) / 1000
+}
+
+// calculations
+function add(a, b) {
+    return a + b;
+}
+
+function substract(a, b) {
+    return a - b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function divide(a, b) {
+    return a / b;
+}
+
+// operations, executes cases based on the user input
+function operate(operator, a, b) {
+    a = Number(a);
+    b = Number(b);
+
+    switch (operator) {
+    case '+':
+        return add(a, b)
+    case '−':
+        return substract(a, b)
+    case '×':
+        return multiply(a, b)
+    case '÷':
+        if (b === 0) return null
+        else return divide(a, b)
+    default:
+        return null
+    }
+}
