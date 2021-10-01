@@ -1,9 +1,11 @@
 img {
-    height: 190px;
-    width: 190px;
+    height: 175px;
+    width: 200px;
+    padding-left: 10px;
+    align-items: center;
     border: 2px #222 solid;
     border-radius: 200px;
-    background-color: rgb(238, 192, 212);
+    background-color: rgb(66, 229, 232);
     margin: 0px;
 }
 
@@ -11,5 +13,5 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px -500px 50px 0px;
+    margin: -40px -500px 20px 0px;
 }
