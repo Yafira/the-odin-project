@@ -41,7 +41,7 @@ button {
     font-family: inherit;
     font-size: inherit;
     outline: none;
-    box-shadow: 5px 10px rgb(181, 154, 172);;
+    box-shadow: 5px 10px rgb(181, 154, 172);
 }
 
 .main {
@@ -55,8 +55,8 @@ button {
 }
 
 .calculator {
-    width: 850px;
-    height: 700px;
+    width: 870px;
+    height: 900px;
     border: 2px var(--border) solid;
     border-radius: 15px;
     padding: 60px;

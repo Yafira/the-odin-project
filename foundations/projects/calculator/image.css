@@ -1,0 +1,15 @@
+img {
+    height: 190px;
+    width: 190px;
+    border: 2px #222 solid;
+    border-radius: 200px;
+    background-color: rgb(238, 192, 212);
+    margin: 0px;
+}
+
+.luna {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px -500px 50px 0px;
+}
