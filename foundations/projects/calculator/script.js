@@ -1,5 +1,5 @@
-let number1 = '';
-let number2 = '';
+let firstNum = '';
+let secondNum = '';
 let currentOperation = null;
 let reset = false;
 
@@ -9,7 +9,7 @@ const operatorButtons = document.querySelectorAll('[data-operator]');
 const equalsButton = document.getElementById('equals');
 const clearButton = document.getElementById('clear');
 const deleteButton = document.getElementById('delete');
-const pointButton = document.getElementById('point');
+const decimalButton = document.getElementById('decimal');
 const lastOperation = document.getElementById('lastOp');
 const operationOnScreen = document.getElementById('currOp');
 
@@ -17,7 +17,7 @@ const operationOnScreen = document.getElementById('currOp');
 equalsButton.addEventListener('click', evaluate);
 clearButton.addEventListener('click', clear);
 deleteButton.addEventListener('click', deleteNum);
-pointButton.addEventListener('click', appendPoint);
+decimalButton.addEventListener('click', appendDecimal);
 
 numButtons.forEach((button) =>
     button.addEventListener('click', () => appendNum(button.textContent))
@@ -28,30 +28,30 @@ operatorButtons.forEach((button) =>
 )
 
 function appendNum(number) {
-    if (operationOnScreen.textContent === '0' || reset);
+    if (operationOnScreen.textContent === '0' || reset)
     resetCalc();
-    operationOnScreen.textContent += number;
+    operationOnScreen.textContent += number
 }
 
 // reset calculator
 function resetCalc() {
-    operationOnScreen.textContent = '';
+    operationOnScreen.textContent = ''
     reset = false;
 }
 
 // clear calculator
 function clear() {
-    operationOnScreen.textContent = '0';
-    lastOperation.textContent = '';
-    number1 = '';
-    number2 = '';
-    currentOperation = null;
+    operationOnScreen.textContent = '0'
+    lastOperation.textContent = ''
+    firstNum = ''
+    secondNum = ''
+    currentOperation = null
 }
 
-function appendPoint() {
+function appendDecimal() {
     if (reset) resetCalc()
     if (operationOnScreen.textContent === '')
-        operationOnScreen.textContent = '0'
+        operationOnScreen.textContent = '.'
     if (operationOnScreen.textContent.includes('.'))
     return
         operationOnScreen.textContent += '.'
@@ -66,9 +66,9 @@ function deleteNum() {
 
 function setOperation(operator) {
     if (currentOperation !== null) evaluate()
-    number1 = operationOnScreen.textContent
+    firstNum = operationOnScreen.textContent
     currentOperation = operator
-    lastOperation.textContent = `${number1} ${currentOperation}`
+    lastOperation.textContent = `${firstNum} ${currentOperation}`
     reset = true
 }
 
@@ -80,11 +80,11 @@ function evaluate() {
         alert("You can't divide by 0.")
     return
 }
-    number2 = operationOnScreen.textContent
+    secondNum = operationOnScreen.textContent
     operationOnScreen.textContent = roundResult(
-        operate(currentOperation, number1, number2)
+        operate(currentOperation, firstNum, secondNum)
     )
-    lastOperation.textContent = `${number1} ${currentOperation} ${number2} =`
+    lastOperation.textContent = `${firstNum} ${currentOperation} ${secondNum} =`
     currentOperation = null
 }
 
