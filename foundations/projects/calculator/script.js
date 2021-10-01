@@ -48,6 +48,7 @@ function clear() {
     currentOperation = null
 }
 
+// decimal functionality
 function appendDecimal() {
     if (reset) resetCalc()
     if (operationOnScreen.textContent === '')
@@ -64,6 +65,7 @@ function deleteNum() {
     .slice(0, -1)
 }
 
+// operation functionality
 function setOperation(operator) {
     if (currentOperation !== null) evaluate()
     firstNum = operationOnScreen.textContent
@@ -72,7 +74,7 @@ function setOperation(operator) {
     reset = true
 }
 
-// evaluate
+// evaluate operation
 function evaluate() {
     if (currentOperation === null || reset)
     return
@@ -92,7 +94,7 @@ function evaluate() {
         return Math.round(number * 1000) / 1000
 }
 
-// calculations
+// calculations, + - x /
 function add(a, b) {
     return a + b;
 }
