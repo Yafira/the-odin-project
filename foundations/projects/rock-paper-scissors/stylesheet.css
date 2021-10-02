@@ -107,3 +107,16 @@ body {
     75% { transform: translateX(-5%) rotate(-1deg); }
     100% { transform: translateX(0%); }
 }
+
+footer {
+    font-size: 20px;
+    height: 60px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+footer .fa-heart {
+    color: rgb(217, 181, 242);
+    padding: 0 10px 0;
+}
