@@ -45,7 +45,7 @@ puts number + 2 #=> 14
 
 age = 19
 name = "John"
-can_swim = false
+can_swim = false # snake case, multiple words that make up a variable uses underscore
 
 # Upcase
 desired_location = "Barcelona"
