@@ -1,7 +1,20 @@
-# assigning value to variables
+# Assigning value to variables
 first_name = 'Joe'
 
-# declaring a variable, assignment operators
+# A variable itself is not a “thing”. It’s just a name for a thing (an object).
+number = 1
+puts number
+
+a = 1
+puts a
+
+large_number = 1
+puts large_number
+
+apples = 1
+puts apples
+
+# Declaring a variable, assignment operators
 age = 18
 age -= 2  #=> 16
 
@@ -20,11 +33,12 @@ a = 4 #=> 4
 b = a #=> 4
 a = 7 #=> 7
 
-# things on the right go first
+# Things on the right go first
 number = 2 + 3 * 4 #=> 14
 puts number
 
-# reusinmg variables
+# Reusinmg variables
+# Variable names can be re-used, and re-assigned.
 number = 4
 number = number * 3 #=> 12
 puts number + 2 #=> 14
@@ -33,7 +47,7 @@ age = 19
 name = "John"
 can_swim = false
 
-# upcase
+# Upcase
 desired_location = "Barcelona"
 johns_location = desired_location
 desired_location  #=> "Barcelona"
@@ -42,7 +56,7 @@ johns_location.upcase!  #=> "BARCELONA"
 desired_location        #=> "BARCELONA"
 johns_location          #=> "BARCELONA"
 
-# getting data from a user
+# Getting data from a user
 name = gets
 Bob
 #=> "Bob\n"
@@ -66,7 +80,7 @@ print_full_name 'Lynn', 'Blake'    # prints Lynn Blake
 print_full_name 'Kim', 'Johansson' # prints Kim Johansson
 puts name                          # prints Somebody Else
 
-# method's invocation, {} or do/end
+# Method's invocation, {} or do/end
 total = 0
 [1, 2, 3].each { |number| total += number }
 puts total # 6
