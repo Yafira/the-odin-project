@@ -32,3 +32,17 @@ def fibonacci(number)
 end
 
 puts fibonacci(6)
+
+# Write a method that counts down to zero using recursion.
+def count_to_zero(numnber)
+    if number <= 0
+        puts number
+    else
+        puts number
+        count_to_zero(numnber - 1)
+    end
+end
+
+count_to_zero(10)
+count_to_zero(20)
+count_to_zero(-3)
