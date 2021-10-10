@@ -36,6 +36,7 @@ a.equal?(b) #=> true
 
 
 ## Spaceship operator (<=>)
+# most commonly used in sorting methods.
 # returns one of three numerical values
 # -1 if the value on the left is less than the value on the right;
 # 0 if the value on the left is equal to the value on the right; and
@@ -43,6 +44,15 @@ a.equal?(b) #=> true
 5 <=> 10    #=> -1
 10 <=> 10   #=> 0
 10 <=> 5    #=> 1
+1 <=> 1000  #=> -1
+1 <=> 1     #=> 0
+1 <=> -1000 #=> 1
+
+def Person
+    def <=> (other_person)  # to compare two people, use last names
+        self.last_name <=> other_person.last_name
+    end
+end                 # now we can run people_array.sort, woohoo!
 
 # Combining expressions
 (4 == 4) && (5 == 5) # true
@@ -51,6 +61,8 @@ a.equal?(b) #=> true
 (4 == 4) || (5 == 5) # true
 (4 == 5) || (5 == 5) # true
 (4 == 5) || (5 == 6) # false
+
+
 
 # when you add the "not" operator in front of a boolean expression it will change that boolean value to its opposite.
 !(4 == 4) # false,  4 == 4 is true but !(true) is false

@@ -16,3 +16,12 @@ else
 end
 
 # You should use an unless statement when you want to not do something if a condition is true, because it can make your code more readable than using if !true.
+
+# unless is the opposite of if
+unless home_team.won_the_super_bowl?
+    puts "I need to drown my sorrows in ice cream"
+end
+
+if current_user.is_a?(Vampire) dispatch_vampire_hunters
+# works the same as
+dispatch_vampire_hunters if current_user.is_a?(Vampire)
