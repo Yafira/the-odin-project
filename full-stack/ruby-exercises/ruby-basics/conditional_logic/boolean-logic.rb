@@ -43,3 +43,21 @@ a.equal?(b) #=> true
 5 <=> 10    #=> -1
 10 <=> 10   #=> 0
 10 <=> 5    #=> 1
+
+# Combining expressions
+(4 == 4) && (5 == 5) # true
+(4 == 5) && (5 == 5) # false
+(4 == 5) && (5 == 6) # false
+(4 == 4) || (5 == 5) # true
+(4 == 5) || (5 == 5) # true
+(4 == 5) || (5 == 6) # false
+
+# when you add the "not" operator in front of a boolean expression it will change that boolean value to its opposite.
+!(4 == 4) # false,  4 == 4 is true but !(true) is false
+
+
+# Highest order of precedence (top) to lowest (bottom)
+<=, <, >, >= - Comparison
+==, != - Equality
+&& - Logical AND
+|| - Logical OR
