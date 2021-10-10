@@ -13,3 +13,23 @@
 for i in 0..5
     puts "#{i} zombies incoming!"
 end
+
+
+# countdown, with range
+x = gets.chomp.to_i
+
+for i in 1..x do
+    puts x - i
+end
+
+puts "Done!"
+
+
+# countdown, with array
+x = [1, 2, 3, 4, 5]
+
+for i in x.reverse do
+    puts i
+end
+
+puts "Done!"
