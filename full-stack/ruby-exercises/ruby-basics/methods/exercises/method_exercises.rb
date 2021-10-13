@@ -33,19 +33,21 @@ end
 # parameter: number (an integer) with default value of 7
 # return value: a string "Today's lucky number is <number>"
 def lucky_number(number = 7)
-    puts "Today's lucky number is #{number}"
+    return "Today's lucky number is #{number}"
 end
+
 
 # method name: #ascii_code
 # parameter: character (a string)
 # return value: the character's ordinal number
 # explicit return value: 'Input Error' if character's length does not equal 1
 # hint: use String#ord
-def ascii_code(character)
-    return 'Input error' unless char.length == 1
-    character.ord
+def ascii_code(string)
+    if string.length != 1
+        return 'Input Error'
+    end
+    string.ord
 end
-
 
 
 # method name: #pet_pun
@@ -56,12 +58,12 @@ end
 # console output: otherwise, "I think <animal>s have pet-tential!" (potential)
 # hint: use puts
 def pet_pun(animal)
-    if animal = 'cat'
+    if animal == 'cat'
         puts 'Cats are purr-fect!'
-    elsif animal = "dog"
+    elsif animal == 'dog'
         puts 'Dogs are paw-some!'
     else
-        "I think #{animal}s have pet-tential!"
+        puts "I think #{animal}s have pet-tential!"
     end
 end
 
