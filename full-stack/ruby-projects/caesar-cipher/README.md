@@ -12,7 +12,7 @@ Task:
 - The main idea behind this system is to rotate the letters an x number of positions on the alphabet.
 - For example, with x = 1, an ‘A’ becomes a ‘B’, a ‘C’ becomes a ‘D’
 with x = 5 an ‘A’ becomes a ‘E’, a ‘B’ becomes a ‘F’and so on.
-(x in this case is the shift factor)
+- x in this case is the <b>shift factor</b>
 
 Quick Tips:
 - You will need to remember how to convert a string into a number.
