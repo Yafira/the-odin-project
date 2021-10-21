@@ -15,7 +15,7 @@ Quick Tips:
 
 ----------------------
 ## Outcome
-- This Ruby method searches a string parameter and counts occurrences of words from a dictionary parameter
+- This method takes an array of stock prices and determines which pair of days is the most profitable to buy and sell with days starting at 0.
 <br>
 <br>
 <b>Parameters</b>
@@ -28,6 +28,6 @@ Quick Tips:
 2 element array: a pair of days representing the best day to buy and the best day to sell
 
 ### Findings
-- How to use nested loops to compare multiple items in an array.
+- How to compare multiple items in an array.
 
 
