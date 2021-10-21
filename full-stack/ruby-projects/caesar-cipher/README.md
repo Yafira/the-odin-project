@@ -23,7 +23,6 @@ Quick Tips:
 ## Outcome
 - This Ruby method searches a string parameter and counts occurrences of words from a dictionary parameter
 <br>
-<br>
 <b>Parameters</b>
 <br>
 (String, Number)
