@@ -24,3 +24,21 @@ Quick Tips:
 - Recall how to turn strings into arrays and arrays into strings.
 
 
+----------------------
+## Outcome
+- This Ruby method searches a string parameter and counts occurrences of words from a dictionary parameter
+<br>
+<br>
+<b>Parameters</b>
+<br>
+(String, Array)
+<br>
+<br>
+<b>Returns</b>
+<br>
+Hash
+
+### Findings
+- How to iterate over an array, create a hash, and modify a hash.
+
+
