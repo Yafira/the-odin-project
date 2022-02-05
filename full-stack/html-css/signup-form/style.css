@@ -76,10 +76,6 @@ h1 {
 	margin: 50px 0;
 }
 
-.extra-text {
-	margin: 40px 0 80px;
-}
-
 /* Form */
 
 .form {
@@ -179,10 +175,6 @@ a:hover {
 	}
 	.left {
 		padding: 10px 20px;
-	}
-	.extra-text {
-		padding: 20px 0;
-		margin: 0;
 	}
 	.form {
 		flex-flow: column nowrap;
