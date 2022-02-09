@@ -400,6 +400,10 @@ body {
 	margin-bottom: 0.15rem;
 }
 
+.trend .username:hover {
+	color: var(--accent);
+}
+
 .trend-1 .picture {
 	background-image: var(--avatar2);
 }
