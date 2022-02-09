@@ -140,6 +140,7 @@ body {
 
 .picture {
 	background: var(--avatar1) center center / cover no-repeat;
+	border: 1px solid #000000;
 	border-radius: 50%;
 }
 
