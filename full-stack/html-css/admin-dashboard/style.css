@@ -90,6 +90,7 @@ body {
 
 .name:hover {
 	color: var(--primary);
+	cursor: pointer;
 }
 
 .top {
