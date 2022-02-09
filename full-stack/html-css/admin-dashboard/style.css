@@ -81,9 +81,7 @@ body {
 }
 
 .card h5:hover {
-	background-color: var(--primary);
-	color: #ffffff;
-	display: inline-block;
+	color: var(--primary);
 }
 
 .name {
