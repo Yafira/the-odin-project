@@ -17,9 +17,9 @@
 	--shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 	--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
 		0 4px 6px -4px rgb(0 0 0 / 0.1);
-	--avatar1: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/02919f117041487.606e0ad91236f.jpg);
-	--avatar2: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/bbfade101650903.5f2369bea9771.jpg);
-	--avatar3: url(https://lh3.googleusercontent.com/bHY50kvRmdB_KDHz8dgVgKU7EBxiFdYUh4Kp35DrMHSAcTiVr4ag1ZoEEa8RqwCDSlq3RbC0a8zS8ELO_3qQ7J0eaMIM6eQHu2saKcqg-tNpBL-leTjuJSaYUkOtyVaB1YkketFT);
+	--avatar1: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/e175c2117041487.606e0ad9135bb.jpg);
+	--avatar2: url(https://lh3.googleusercontent.com/bHY50kvRmdB_KDHz8dgVgKU7EBxiFdYUh4Kp35DrMHSAcTiVr4ag1ZoEEa8RqwCDSlq3RbC0a8zS8ELO_3qQ7J0eaMIM6eQHu2saKcqg-tNpBL-leTjuJSaYUkOtyVaB1YkketFT);
+	--avatar3: url(https://cdn.dribbble.com/users/230875/screenshots/12078079/media/7ba8ec4a42b529dcbbc695ce0dd07a4a.jpg);
 	--avatar4: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/c0b680112177877.600fef6e0b567.jpg);
 }
 
@@ -78,6 +78,12 @@ body {
 	padding: 1.5rem 3rem;
 	box-shadow: var(--shadow-lg);
 	z-index: 3;
+}
+
+.card h5:hover {
+	background-color: var(--primary);
+	color: #ffffff;
+	display: inline-block;
 }
 
 .name {
@@ -190,6 +196,7 @@ body {
 	font-weight: 500;
 	padding: 0.75em 2.3em;
 	border-radius: 99em;
+	box-shadow: 5px 7px #888888;
 }
 
 /* SIDEBAR */
