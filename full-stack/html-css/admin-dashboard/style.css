@@ -275,6 +275,10 @@ body {
 	color: var(--main-text);
 }
 
+#star {
+	color: #eecc0b;
+}
+
 .announcements h3,
 .projects h3,
 .trending h3 {
