@@ -20,3 +20,30 @@ class Book {
 		this.read = form.read.checked;
 	}
 }
+
+// creates book from constructor
+let myLibrary = [];
+let newBook;
+
+// adds book to library
+function addBookToLibrary(e) {
+	e.preventDefault();
+	popUpForm.style.display = 'none';
+
+	newBook = new Book(title, author, pages, read);
+	myLibrary.push(newBook);
+	setData(); //saves update in local storage
+	render();
+	form.reset();
+}
+
+// creates book visual in browser
+function render() {
+	const display = document.getElementById('lib-container');
+	const books = document.querySelectorAll('.book');
+	books.forEach((book) => display.removeChild(book));
+
+	for (let i = 0; i < myLibrary.length; i++) {
+		createBook(myLibrary[i]);
+	}
+}
