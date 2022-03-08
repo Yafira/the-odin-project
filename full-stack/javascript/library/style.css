@@ -104,7 +104,8 @@ button:hover {
 }
 
 /* Modal Popup */
-input[type='text'] {
+input[type='text'],
+input[type='number'] {
 	height: 30px;
 	width: 278px;
 	text-indent: 10px;
