@@ -95,7 +95,7 @@ function createBook(item) {
 		render();
 	});
 
-	// toggle ability to each book 'read' button on click
+	// toggle feature to each book 'read' button on click
 	readBtn.addEventListener('click', () => {
 		item.read = !item.read;
 		setData();
