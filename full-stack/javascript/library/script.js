@@ -52,9 +52,9 @@ function render() {
 function createBook(item) {
 	const library = document.querySelector('#lib-container');
 	const bookDiv = document.createElement('div');
-	const titleDiv = document.createElement('div');
-	const authorDiv = document.createElement('div');
-	const pageDiv = document.createElement('div');
+	const bookTitle = document.createElement('div');
+	const bookAuthor = document.createElement('div');
+	const bookPages = document.createElement('div');
 	const removeBtn = document.createElement('button');
 	const readBtn = document.createElement('button');
 
@@ -62,17 +62,17 @@ function createBook(item) {
 	bookDiv.classList.add('book');
 	bookDiv.setAttribute('id', myLibrary.indexOf(item));
 	// title
-	titleDiv.textContent = item.title;
-	titleDiv.classList.add('title');
-	bookDiv.appendChild(titleDiv);
+	bookTitle.textContent = item.title;
+	bookTitle.classList.add('title');
+	bookDiv.appendChild(bookTitle);
 	// author
-	authorDiv.textContent = item.author;
-	authorDiv.classList.add('author');
-	bookDiv.appendChild(authorDiv);
+	bookAuthor.textContent = item.author;
+	bookAuthor.classList.add('author');
+	bookDiv.appendChild(bookAuthor);
 	// pages read
-	pageDiv.textContent = item.pages;
-	pageDiv.classList.add('pages');
-	bookDiv.appendChild(pageDiv);
+	bookPages.textContent = item.pages;
+	bookPages.classList.add('pages');
+	bookDiv.appendChild(bookPages);
 	// read btn
 	readBtn.classList.add('readBtn');
 	bookDiv.appendChild(readBtn);
