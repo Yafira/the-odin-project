@@ -79,8 +79,10 @@ function createBook(item) {
 	// read btn functionality
 	if (item.read === false) {
 		readBtn.textContent = 'Not Read';
+		readBtn.classList.add('btn-red');
 	} else {
 		readBtn.textContent = 'Read';
+		readBtn.classList.add('btn-green');
 	}
 	// remove book
 	removeBtn.textContent = 'Remove';
