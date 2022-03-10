@@ -7,3 +7,4 @@
 - [ ] Add select all feature to delete multiple books at a time
 - [ ] Add start date and end date of when book was completed
 - [ ] Add login authentication
+- [ ] Option to edit book details: title, author, pages
