@@ -1,4 +1,4 @@
-# Bookmark, a mini library
+# Bookmark, a mini library using localStorage
 
 ### Here's a simple way to keep track of all the books you have read, currently reading or a future read you might be interested in
 
