@@ -7,7 +7,7 @@ const newBookBtn = document.querySelector('#newBtn');
 newBookBtn.addEventListener('click', () => (popUpForm.style.display = 'block'));
 
 // close popup
-const popUpForm = document.getElementById('popUp');
+const popUpForm = document.getElementById('library-card');
 const closePopUp = document.getElementsByTagName('span')[0];
 closePopUp.addEventListener('click', () => (popUpForm.style.display = 'none'));
 
@@ -88,7 +88,6 @@ function createBook(item) {
 	removeBtn.textContent = 'Remove';
 	removeBtn.setAttribute('id', 'removeBtn');
 	bookDiv.appendChild(removeBtn);
-
 	library.appendChild(bookDiv);
 	// remove book button
 	removeBtn.addEventListener('click', () => {
@@ -121,5 +120,4 @@ function restore() {
 		render();
 	}
 }
-
 restore();
