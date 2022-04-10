@@ -7,7 +7,7 @@ The Odin Project (also known as TOP) is an open-source community for learning fu
 The curriculum is divided into distinct courses, each covering the subject language in depth. Each course contains a listing of lessons interspersed with multiple projects. These projects give students the opportunity to practice what they are learning, thereby reinforcing and solidifying the theoretical knowledge learned in the lessons. 
 
 <b>Topics covered:</b>
-- Ruby programming
+- Ruby
 - Ruby on Rails
 - SQL
 - HTML and CSS
