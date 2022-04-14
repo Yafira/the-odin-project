@@ -32,25 +32,30 @@ window.addEventListener('DOMContentLoaded', () => {
 		[2, 4, 6],
 	]
 
-	// utility functions
-	const isValidAction = (tile) => {
-		if (tile.innerText === 'X' || tile.innerText === 'O') {
-			return false
+	// result evaluation, is there a winner? or tie?
+	function handleResultValidation() {
+		let roundWon = false
+		for (let i = 0; i <= 7; i++) {
+			const win = winningConditions[i]
+			const a = board[win[0]]
+			const b = board[win[1]]
+			const c = board[win[2]]
+			if (a === '' || b === '' || c === '') {
+				continue
+			}
+			if (a === b && b == c) {
+				roundWon = true
+				break
+			}
 		}
 
-		return true
-	}
+		if (roundWon) {
+			announce(currentPlayer === 'X' ? PLAYERX_WON : PLAYERO_WON)
+			isGameActive = false
+			return
+		}
 
-	const updateBoard = (index) => {
-		board[index] = currentPlayer
-	}
-
-	// handle player change
-	const switchPlayer = () => {
-		playerDisplay.classList.remove(`player${{ currentPlayer }}`)
-		currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
-		playerDisplay.innerText = currentPlayer
-		playerDisplay.classList.add(`player${{ currentPlayer }}`)
+		if (!board.includes('')) announce(TIE)
 	}
 
 	// announce end game result
@@ -68,44 +73,60 @@ window.addEventListener('DOMContentLoaded', () => {
 		announcer.classList.remove('hide')
 	}
 
-	// result evaluation, is there a winner? or tie?
-	function handleResultValidation() {
-		let roundWon = false
-		for (let i = 0; i <= 7; i++) {
-			const win = winningConditions[i]
-			const a = board[win[0]]
-			const b = board[win[1]]
-			const c = board[win[2]]
-			if ((a === '') | (b === '') | (c === '')) {
-				continue
-			}
-			if (a === b && b == c) {
-				roundWon = true
-				break
-			}
+	// utility functions
+	const isValidAction = (tile) => {
+		if (tile.innerText === 'X' || tile.innerText === 'O') {
+			return false
 		}
 
-		if (roundWon) {
-			announce(currentPlayer === 'X' ? PLAYERX_WON : PLAYERO_WON)
-			isGameActive = false
-			return
-		}
-		if (!board.includes('')) announce(TIE)
+		return true
+	}
+
+	const updateBoard = (index) => {
+		board[index] = currentPlayer
+	}
+
+	// handle player change
+	const switchPlayer = () => {
+		playerDisplay.classList.remove(`player${currentPlayer}`)
+		currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
+		playerDisplay.innerText = currentPlayer
+		playerDisplay.classList.add(`player${currentPlayer}`)
 	}
 
 	// user action
 	const userAction = (tile, index) => {
 		if (isValidAction(tile) && isGameActive) {
 			tile.innerText = currentPlayer
-			tile.classList.add(`player${{ currentPlayer }}`)
+			tile.classList.add(`player${currentPlayer}`)
 			updateBoard(index)
 			handleResultValidation()
 			switchPlayer()
 		}
 	}
 
+	// reset board
+	const resetGame = () => {
+		board = ['', '', '', '', '', '', '', '', '']
+		isGameActive = true
+		announcer.classList.add('hide')
+
+		if (currentPlayer === 'O') {
+			changePlayer()
+		}
+
+		tiles.forEach((tile) => {
+			tile.innerText = ''
+			tile.classList.remove('playerX')
+			tile.classList.remove('playerO')
+		})
+	}
+	// Event Listeners
 	// event listeners for tiles
 	tiles.forEach((tile, index) => {
 		tile.addEventListener('click', () => userAction(tile, index))
 	})
+
+	// event listener for reset button
+	resetButton.addEventListener('click', resetGame)
 })
