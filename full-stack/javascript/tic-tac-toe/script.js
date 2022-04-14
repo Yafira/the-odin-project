@@ -68,6 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		announcer.classList.remove('hide')
 	}
 
+	// result evaluation, is there a winner? or tie?
 	function handleResultValidation() {
 		let roundWon = false
 		for (let i = 0; i <= 7; i++) {
@@ -91,4 +92,20 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 		if (!board.includes('')) announce(TIE)
 	}
+
+	// user action
+	const userAction = (title, index) => {
+		if (isValidAction(tile) && isGameActive) {
+			tile.innerText = currentPlayer
+			tile.classList.add(`player${{ currentPlayer }}`)
+			updateBoard(index)
+			handleResultValidation()
+			switchPlayer()
+		}
+	}
+
+	// event listeners for tiles
+	tiles.forEach((tile, index) => {
+		tile.addEventListener('click', () => userAction(tile, index))
+	})
 })
