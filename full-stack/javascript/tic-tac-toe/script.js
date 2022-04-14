@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	const resetButton = document.querySelector('#reset')
 	const announcer = document.querySelector('.announcer')
 
+	// global variables
 	let board = ['', '', '', '', '', '', '', '', '']
 	let currentPlayer = 'X'
 	let isGameActive = true
@@ -30,4 +31,25 @@ window.addEventListener('DOMContentLoaded', () => {
 		[0, 4, 8],
 		[2, 4, 6],
 	]
+
+	// utility functions
+	const isValidAction = (tile) => {
+		if (tile.innerText === 'X' || tile.innerText === 'O') {
+			return false
+		}
+
+		return true
+	}
+
+	const updateBoard = (index) => {
+		board[index] = currentPlayer
+	}
+
+	// handle player change
+	const switchPlayer = () => {
+		playerDisplay.classList.remove(`player${{ currentPlayer }}`)
+		currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
+		playerDisplay.innerText = currentPlayer
+		playerDisplay.classList.add(`player${{ currentPlayer }}`)
+	}
 })
