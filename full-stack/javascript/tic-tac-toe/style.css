@@ -76,7 +76,7 @@
 	cursor: pointer;
 }
 
-#reset {
+#restart {
 	background-color: rgb(222, 205, 249);
 	color: #5910f6;
 	border-radius: 5px;
@@ -85,7 +85,7 @@
 	cursor: pointer;
 }
 
-#reset:hover {
+#restart:hover {
 	background-color: rgb(111, 36, 231);
 	color: #ffffff;
 }

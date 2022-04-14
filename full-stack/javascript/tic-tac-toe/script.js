@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	// DOM nodes
 	const tiles = Array.from(document.querySelectorAll('.tile'))
 	const playerDisplay = document.querySelector('.display-player')
-	const resetButton = document.querySelector('#reset')
+	const resetButton = document.querySelector('#restart')
 	const announcer = document.querySelector('.announcer')
 
 	// global variables
