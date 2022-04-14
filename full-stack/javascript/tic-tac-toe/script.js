@@ -112,7 +112,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		announcer.classList.add('hide')
 
 		if (currentPlayer === 'O') {
-			changePlayer()
+			switchPlayer()
 		}
 
 		tiles.forEach((tile) => {
