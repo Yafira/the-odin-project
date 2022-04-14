@@ -4,8 +4,31 @@
 	font-family: 'Roboto', sans-serif;
 }
 
-body {
-	background-color: rgb(249, 241, 254);
+.background {
+	background-color: #7e9f72;
+	height: 100vh;
+	padding-top: 1px;
+}
+
+.title {
+	color: rgb(207, 232, 150);
+	text-decoration: rgb(222, 205, 249) wavy underline;
+	text-align: center;
+	font-size: 50px;
+	margin-top: 10%;
+}
+
+.display {
+	padding: 30px;
+	color: rgb(219, 241, 196);
+	font-size: 40px;
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.hide {
+	display: none;
 }
 
 .container {
@@ -17,7 +40,7 @@ body {
 }
 
 .tile {
-	border: 2px solid rgb(0, 0, 0);
+	border: 5px solid rgb(220, 227, 214);
 	min-width: 50px;
 	min-height: 100px;
 	display: flex;
@@ -28,9 +51,31 @@ body {
 }
 
 .playerX {
-	color: #09c372;
+	color: #5910f6;
 }
 
 .playerO {
-	color: #498afb;
+	color: #49fbc6;
+}
+
+.controls {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1em;
+}
+
+.controls button {
+	color: white;
+	padding: 8px;
+	border-radius: 8px;
+	border: none;
+	font-size: 20px;
+	margin-left: 1em;
+	cursor: pointer;
+}
+
+#reset {
+	background-color: #f30feb;
 }
