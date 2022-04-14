@@ -12,14 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	const PLAYERX_WON = 'PLAYERX_WON'
 	const PLAYERO_WON = 'PLAYERO_WON'
-	const TIE = 'TIE'
-
-	/*
-        Indexes within the board
-        [0] [1] [2]
-        [3] [4] [5]
-        [6] [7] [8]
-    */
+	const DRAW = 'DRAW'
 
 	const winningConditions = [
 		[0, 1, 2],
@@ -55,7 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			return
 		}
 
-		if (!board.includes('')) announce(TIE)
+		if (!board.includes('')) announce(DRAW)
 	}
 
 	// announce end game result
@@ -65,10 +58,10 @@ window.addEventListener('DOMContentLoaded', () => {
 				announcer.innerHTML = 'Player <span class="playerO">O</span> Won!'
 				break
 			case PLAYERX_WON:
-				announcer.innerHTML = 'Player <span class="playerX">X</span> Won'
+				announcer.innerHTML = 'Player <span class="playerX">X</span> Won!'
 				break
-			case TIE:
-				announcer.innerText = 'Tie'
+			case DRAW:
+				announcer.innerText = 'Draw!'
 		}
 		announcer.classList.remove('hide')
 	}
