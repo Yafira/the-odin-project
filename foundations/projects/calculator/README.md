@@ -11,3 +11,6 @@
 
 ![img](./assets/smc.jpg)
 ![gif](./assets/smc2.gif)
+
+-------------------
+--> <a href="https://sailor-moon-calculator.glitch.me/">Live Demo</a>
